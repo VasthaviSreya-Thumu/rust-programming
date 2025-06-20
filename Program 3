@@ -1,21 +1,13 @@
 fn main() {
-    let x = 5;
-    println!("Outer x = {}", x);
+    let mut x = 1000;
 
-    {
-        let x = 10;
-        println!("Inner x = {}", x);
+    let y = "Programming";
 
-        {
-            let x = 20;
-            println!("Nested inner x = {}", x);
-        }
+    println!("x = {}", x);
+    println!("y = {}", y);
 
-        println!("Inner x after nested scope = {}", x);
-    }
+    x = 1100;
 
-    println!("Outer x after inner scopes = {}", x);
-
-    let x = x + 1;
-    println!("Shadowed outer x = {}", x);
+    println!("x = {}", x);
+    println!("y = {}", y);
 }
